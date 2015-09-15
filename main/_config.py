@@ -10,11 +10,12 @@ AWS_SECRET_KEY = ''
 AWS_BUCKET = 'www.vpr.net'
 AWS_DIRECTORY = 'sandbox/app/'
 
-NPR_API_KEY = ''
-
-GOOGLE_SPREADSHEET = {'USER': '',
-    'PASSWORD': '',
-    'SOURCE': ''}
+SOUNDCLOUD_API = {
+	"client_id": "",
+	"client_secret": "",
+    "username": "",
+	"password": ""}
+SOUNDCLOUD_NUM_TRACKS = 5
 
 # Cache Settings (units in seconds)
 STATIC_EXPIRES = 60 * 24 * 3600

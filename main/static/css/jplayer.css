@@ -1,0 +1,247 @@
+.jp-playlist-container {
+	position: relative;
+	}
+	#jp-eos-logo {
+		font-size: 1.3em;
+		margin-top: 0;
+		position: absolute;
+		top: 0;
+		left: -2.5em;
+		}
+	#jp-eos-logo.small {
+		font-size: 1.1em;
+		margin-top: 0;
+		position: absolute;
+		left: -3.5em;
+		}
+	#jp-eos-soundcloud-logo {
+		position: absolute;
+		bottom: 0.1em;
+		left: 0.5em;
+		width: 100px;
+		}
+#eos-player {
+	width: 100%;
+	max-width: 400px;
+	}
+		#jp-eos-logo svg {
+			height: 3.5em;
+			}
+
+.jp-audio *:focus,
+.jp-audio-stream *:focus
+	{
+	/* Disable the browser focus highlighting. */
+	outline: none;
+	}
+
+.jp-audio button::-moz-focus-inner,
+.jp-audio-stream button::-moz-focus-inner
+	{
+	/* Disable the browser CSS3 focus highlighting. */
+	border: 0;
+	}
+
+
+/*   jp-audio, jp-interface   */
+.jp-audio,
+.jp-audio-stream
+	{
+	font-size: 16px;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1;
+	color: #fff;
+	border: solid 1px #cce0d8;
+	border-radius: .1em;
+	width: 100%;
+	margin: 1em 0 0;
+	box-sizing: border-box;
+	background: #eee;
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background:-webkit-linear-gradient(top, #fff, #eee);
+	background:-o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+	background-image: linear-gradient(180deg, #ffffff, #eeeeee);
+	}
+.jp-audio.jp-eos {
+	border-color: #abc;
+/*	width: 104%;	*/
+	}
+	.jp-eos .jp-interface {
+		border-bottom: solid 1px #abc;
+		}
+
+.jp-interface
+	{
+	position: relative;
+	width: 100%;
+	height: 28px;
+	background-color: #eee;
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background:-webkit-linear-gradient(top, #fff, #eee);
+	background:-o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+	background-image: linear-gradient(180deg, #ffffff, #eeeeee);
+  	}
+
+
+
+
+/*   play button   */
+.jp-interface a,
+.jp-interface button
+	{
+	display: block;
+	float: left;
+	overflow: hidden;
+	text-indent: -9999px;
+	height: 100%;
+	margin: 0 1px 2px 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	}
+.jp-eos .jp-play {
+	width: 10%;
+	margin: 0; 
+	border-right: solid 1px #ccc8e0;
+	background: url("/static/images/blue-buttons.png") center 3px no-repeat;	
+	box-sizing: border-box;
+	}
+.jp-eos.jp-state-playing .jp-play,
+.jp-eos.jp-state-playing .jp-play:focus {
+  	background: url("/static/images/blue-buttons.png") center -23px no-repeat;
+	}
+
+.jp-eos ul {
+	list-style-type: none;
+	padding: 0 0 0 0;
+	margin: 0;
+	}
+	.jp-eos ul li {
+		text-align: right;
+		font-size: .8em;
+		color: #006184;
+		list-style-type: none;
+		padding: 0;
+		margin: .9em .5em;
+		}
+	.jp-eos ul li.jp-playlist-current {
+		font-weight: 600;
+		}
+	.jp-eos ul li.jp-playlist-current a.sclink {
+		font-weight: normal;
+		}
+		.jp-eos ul li a {
+			color: #006184;
+			text-decoration: none;			
+			}
+		.jp-eos ul li span {
+			font-size: .8em;
+			font-weight: normal;
+			margin-right: 1.3em;
+			}
+		.jp-eos ul li a.sclink {
+				font-size: 1em;
+				position: relative;
+/*				top: -.06em;	*/
+			}
+/*   progress, play, and seek bars   */
+.jp-progress
+	{
+	width: 90%;
+	height: 100%;
+	padding: 0 2px 2px 2px;
+	margin-bottom: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	}
+.jp-seek-bar
+	{
+	width: 0px;
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer; 
+	background: #eee;
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background:-webkit-linear-gradient(top, #fff, #eee);
+	background:-o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+	background-image: linear-gradient(180deg, #ffffff, #EEEEEE);
+	}
+.jp-play-bar
+	{
+	width: 0px;
+	height: 100%;
+	overflow: hidden;
+	background: #ddd;
+	background: -moz-linear-gradient(top, #ddd, #ccc);
+	background:-webkit-linear-gradient(top, #ddd, #ccc);
+	background:-o-linear-gradient(top, #ddd, #ccc);
+	background: linear-gradient(top, #ddd, #ccc);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#dddddd', endColorstr='#cccccc');
+	background-image: linear-gradient(180deg, #dddddd, #cccccc);
+	}
+
+
+
+/*   title & duration   */
+.jp-title
+	{
+	position: absolute; 
+	font-size: 14px;
+	position: absolute;
+	top: 6px;
+	left: 12%;
+	color: #509e2f;
+	font-weight: bold;
+	}
+.jp-title span
+	{
+	font-size: 12px;
+	font-weight: normal;
+	}
+.jp-duration
+	{
+	cursor: pointer;
+	font-size: 12px;
+	color: #509e2f;
+	position: absolute;
+	top: 8px;
+	right: 9px;
+	}
+.jp-eos .jp-duration {
+	color: #006184;
+	}
+
+
+/*   NO SOLUTION error feedback   */
+.jp-no-solution 
+	{
+	padding: 5px;
+	font-size: .8em;
+	background-color: #3a2a45;
+	border-top: 2px solid #554461;
+	border-left: 2px solid #554461;
+	border-right: 2px solid #180a1f;
+	border-bottom: 2px solid #180a1f;
+	color: #FFF;
+	display: none;
+	}
+.jp-no-solution a
+	{
+	color: #FFF;
+	}
+.jp-no-solution span
+	{
+	font-size: 1em;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	}
+
+

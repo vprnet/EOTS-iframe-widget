@@ -1,7 +1,7 @@
-#VPR App Template
-Used to create and push static web applications for hosting on Amazon S3.
+#VPR EOTS Iframe Widget
+A SoundCloud-driven widget that provides a playlist of the most recent EOTS forecasts/SC Tracks
 
-This stack is used by VPR to publish news apps and can be used for anything from building a blog to creating more advanced web applications.
+
 
 ## Technology
 - [Flask](http://flask.pocoo.org/): Used for local development

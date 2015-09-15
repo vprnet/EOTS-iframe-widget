@@ -3,12 +3,72 @@
 {% block title %}{{ page_title }} | VPR{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <h2>This is the VPR App Template</h2>
-        </div>
-    </div>
-</div>
+<div id="eos-player">
+	<div id="jquery_jplayer_eos" class="jp-jplayer"></div>
+	<div id="jp_container_eos" class="jp-audio jp-eos" role="application" aria-label="media player">
+		<div class="jp-type-playlist">
+			<div class="jp-gui jp-interface audio-container">
+				<a href="#" class="jp-play" role="button" tabindex="0">&#x25BA;</a>
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+			</div>
+			<div class="jp-playlist-container">
+				<div class="jp-playlist">
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
+				<h1 id="jp-eos-logo"><a href="http://www.fairbanksmuseum.org/eye-on-the-sky" data-logo-path="/static/images/eye-on-the-sky-logo.svg">Eye On The Sky</a></h1>
+				<a id="jp-eos-soundcloud-logo" target="_BLANK" href="https://soundcloud.com/eye-on-the-sky/"><img src="/static/images/soundcloud-logo.png" /></a>
+			</div>
+			<div class="jp-no-solution">
+				<span>Update Required</span>
+				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
 
+		new jPlayerPlaylist({
+			jPlayer: "#jquery_jplayer_eos",
+			cssSelectorAncestor: "#jp_container_eos"
+		}, [    
+{% for track in tracks %}
+			{
+				title: '{{ track.title }} <a class="sclink" target="_BLANK" href="{{ track.permalink }}">&#xbb;</a><br /><span>{{ track.timestamp }}</span>',
+				mp3: '{{ track.stream }}',
+				duration: {{ track.duration }}
+			}
+	{% if not loop.last %}
+		,
+	{% endif %}
+{% endfor %}
+
+
+		], {
+			play: function() { // To avoid multiple jPlayers playing together.
+				$(this).jPlayer("pauseOthers");
+			},
+			cssSelectorAncestor: "#jp_container_eos",
+			swfPath: "/pages-js",
+			supplied: "mp3",
+			wmode: "window",
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: true,
+			toggleDuration: true,
+			smoothPlayBar: true,
+			preload: "none"
+		});
+	});
+	</script>
+</article>
 {% endblock %}
