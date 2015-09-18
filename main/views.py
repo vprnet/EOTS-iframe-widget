@@ -21,7 +21,7 @@ def index():
     os.environ['TZ'] = 'US/Eastern'
     time.tzset()
     offset = int(time.strftime('%z')[-3])
-    page_title = 'VPR App Template'
+    page_title = 'EOTS iframe widget'
     page_url = FREEZER_BASE_URL.rstrip('/') + request.path   
     client = soundcloud.Client(
     	client_id=SOUNDCLOUD_API['client_id'],
@@ -39,21 +39,9 @@ def index():
 				'permalink': track.permalink_url,
 				'stream': track.stream_url + '?client_id='+SOUNDCLOUD_API['client_id']}
     		playlist_tracks.append(d)
-    		print track.title
 
-
-    social = {
-        'title': "",
-        'subtitle': "",
-        'img': "",
-        'description': "",
-        'twitter_text': "",
-        'creator': "",
-        'twitter_hashtag': ""
-    }
 
     return render_template('content.html',
     	tracks=playlist_tracks,
         page_title=page_title,
-        page_url=page_url,
-        social=social)
+        page_url=page_url)

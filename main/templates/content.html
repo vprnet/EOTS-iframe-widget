@@ -22,8 +22,10 @@
 						<li>&nbsp;</li>
 					</ul>
 				</div>
-				<h1 id="jp-eos-logo"><a href="http://www.fairbanksmuseum.org/eye-on-the-sky" data-logo-path="/static/images/eye-on-the-sky-logo.svg">Eye On The Sky</a></h1>
-				<a id="jp-eos-soundcloud-logo" target="_BLANK" href="https://soundcloud.com/eye-on-the-sky/"><img src="/static/images/soundcloud-logo.png" /></a>
+				<img id="jp-eos-logo" src="{{ url_for('static', filename='images/eye-on-the-sky-logo.png') }}" />
+				<a id="jp-eos-soundcloud-logo" target="_BLANK" href="https://soundcloud.com/eye-on-the-sky/">
+					<img src="{{ url_for('static', filename='images/soundcloud-logo.png') }}" />
+				</a>
 			</div>
 			<div class="jp-no-solution">
 				<span>Update Required</span>
