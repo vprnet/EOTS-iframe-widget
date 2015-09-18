@@ -2,7 +2,6 @@
 A SoundCloud-driven widget that provides a playlist of the most recent EOTS forecasts/SC Tracks
 
 
-
 ## Technology
 - [Flask](http://flask.pocoo.org/): Used for local development
 
@@ -10,13 +9,6 @@ A SoundCloud-driven widget that provides a playlist of the most recent EOTS fore
 
 - [Jinja](http://jinja.pocoo.org/docs/): Python templating language
 
-- [Bootstrap](http://getbootstrap.com/): Twitter's HTML/CSS/JS framework
-
-- [Sass](http://sass-lang.com/): CSS extension that allows for variables, inheritance, and even logic in stylesheets
-
-- [Compass](http://compass-style.org/): A Sass "framework"
-
-- [Grunt](http://gruntjs.com/): A JavaScript task runner used for concatenation, minification, preprocessing and image optimization that runs in the background during development and refreshes the page when JS changes and injects CSS changes into the pages.
 
 ## Set Up
 
@@ -42,19 +34,8 @@ A SoundCloud-driven widget that provides a playlist of the most recent EOTS fore
 
         $ cp main/_config.py main/config.py
 
-  These settings can be configured later (see "Deploy" below)
-
-7. Install grunt modules ([read this](http://24ways.org/2013/grunt-is-not-weird-and-hard/) if getting started with Grunt)
-
-        $ cd main/static
-        $ npm install
 
 ##Develop
-
-To get grunt running in the background:
-
-        $ cd main/static
-        $ grunt
 
 To run local server, get back to project root and run:
 
