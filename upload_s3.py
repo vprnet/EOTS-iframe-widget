@@ -61,7 +61,6 @@ def set_metadata():
 
     # define all necessary attributes of each file for s3
     for filename in upload_list:
-    	print filename
         k = Key(mybucket)
         ext = os.path.splitext(filename)[1]
         if not ext:
