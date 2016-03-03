@@ -8,20 +8,20 @@
 		width: 120px;
 		}
 	#jp-eos-logo.small {
-		position: absolute;
-		top: 0;
+		position: relative;
 		left: 15px;
+		top: -10px;
 		width: 100px;
 		}
 	#jp-eos-soundcloud-logo {
 		position: absolute;
-		bottom: -6px;
+		bottom: -2px;
 		left: 6px;
 		width: 100px;
 		}
 #eos-player {
 	width: 100%;
-	max-width: 400px;
+	max-width: 1000px;
 	}
 
 .jp-audio *:focus,
@@ -101,9 +101,9 @@
 	}
 .jp-eos .jp-play {
 	width: 10%;
-	margin: 0; 
+	margin: 0;
 	border-right: solid 1px #ccc8e0;
-	background: url("../images/blue-buttons.png") center 3px no-repeat;	
+	background: url("../images/blue-buttons.png") center 3px no-repeat;
 	box-sizing: border-box;
 	}
 .jp-eos.jp-state-playing .jp-play,
@@ -132,7 +132,7 @@
 		}
 		.jp-eos ul li a {
 			color: #006184;
-			text-decoration: none;			
+			text-decoration: none;
 			}
 		.jp-eos ul li span {
 			font-size: .8em;
@@ -160,7 +160,7 @@
 	width: 0px;
 	height: 100%;
 	overflow: hidden;
-	cursor: pointer; 
+	cursor: pointer;
 	background: #eee;
 	background: -moz-linear-gradient(top, #fff, #eee);
 	background:-webkit-linear-gradient(top, #fff, #eee);
@@ -188,7 +188,7 @@
 /*   title & duration   */
 .jp-title
 	{
-	position: absolute; 
+	position: absolute;
 	font-size: 14px;
 	position: absolute;
 	top: 6px;
@@ -216,7 +216,7 @@
 
 
 /*   NO SOLUTION error feedback   */
-.jp-no-solution 
+.jp-no-solution
 	{
 	padding: 5px;
 	font-size: .8em;
@@ -239,5 +239,3 @@
 	text-align: center;
 	font-weight: bold;
 	}
-
-

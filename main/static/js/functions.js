@@ -7,10 +7,10 @@ $(document).ready(function() {
 
 function adjustSize() {
 	var width = $(window).width();
-	if(width<=320) {
+	if(width<=800) {
 		$("#jp-eos-logo").addClass("small");
 	}
 	else {
-		$("#jp-eos-logo").removeClass("small");	
+		$("#jp-eos-logo").removeClass("small");
 	}
 }

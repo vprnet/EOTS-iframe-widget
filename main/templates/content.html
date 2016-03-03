@@ -40,7 +40,7 @@
 		new jPlayerPlaylist({
 			jPlayer: "#jquery_jplayer_eos",
 			cssSelectorAncestor: "#jp_container_eos"
-		}, [    
+		}, [
 {% for track in tracks %}
 			{
 				title: '{{ track.title }} <a class="sclink" target="_BLANK" href="{{ track.permalink }}">&#xbb;</a><br /><span>{{ track.timestamp }}</span>',
