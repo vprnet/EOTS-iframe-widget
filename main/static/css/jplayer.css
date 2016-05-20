@@ -10,7 +10,7 @@
 	#jp-eos-logo.small {
 		position: relative;
 		left: 15px;
-		top: -10px;
+		top: -30px;
 		width: 100px;
 		}
 	#jp-eos-soundcloud-logo {
@@ -43,9 +43,9 @@
 .jp-audio,
 .jp-audio-stream
 	{
-	font-size: 16px;
+	font-size: 17px;
 	font-family: Verdana, Arial, sans-serif;
-	line-height: 1;
+	line-height: 1.5;
 	color: #fff;
 	border: solid 1px #cce0d8;
 	border-radius: .1em;
@@ -207,7 +207,7 @@
 	font-size: 12px;
 	color: #509e2f;
 	position: absolute;
-	top: 8px;
+	top: 2px;
 	right: 9px;
 	}
 .jp-eos .jp-duration {
