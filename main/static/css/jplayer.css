@@ -15,7 +15,7 @@
 		}
 	#jp-eos-soundcloud-logo {
 		position: absolute;
-		bottom: -2px;
+		bottom: 2px;
 		left: 6px;
 		width: 100px;
 		}
@@ -47,18 +47,11 @@
 	font-family: Verdana, Arial, sans-serif;
 	line-height: 1.5;
 	color: #fff;
-	border: solid 1px #cce0d8;
 	border-radius: .1em;
 	width: 100%;
 	margin: 0;
 	box-sizing: border-box;
-	background: #eee;
-	background: -moz-linear-gradient(top, #fff, #eee);
-	background:-webkit-linear-gradient(top, #fff, #eee);
-	background:-o-linear-gradient(top, #fff, #eee);
-	background: linear-gradient(top, #fff, #eee);
-	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
-	background-image: linear-gradient(180deg, #ffffff, #eeeeee);
+
 	}
 .jp-audio.jp-eos {
 	border-color: #abc;
