@@ -31,7 +31,8 @@ def index():
     tracks = client.get('/me/tracks', order='created_at', limit=SOUNDCLOUD_NUM_TRACKS)
     playlist_tracks = []
     for track in tracks:
-    	if track.streamable and 'public'==track.sharing:
+    	if track.streamable and 'public'==track.sharing and len(playlist_tracks) < 5:
+	
     		d = {
     			'title': track.title,
 				'timestamp': formatTimestamp(getTimestamp(track.created_at,offset)),
