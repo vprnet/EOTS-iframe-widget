@@ -15,7 +15,7 @@ SOUNDCLOUD_API = {
 	"client_secret": "",
     "username": "",
 	"password": ""}
-SOUNDCLOUD_NUM_TRACKS = 5
+SOUNDCLOUD_NUM_TRACKS = 10
 
 # Cache Settings (units in seconds)
 STATIC_EXPIRES = 60 * 24 * 3600
